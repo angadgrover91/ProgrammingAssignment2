@@ -1,12 +1,12 @@
 makeCacheMatrix <- function(x = matrix()) {
-  m <- NULL # Used to the value of m to null 
-  y <- NULL # Used the value of y to null
+  m <- NULL # Used to set the value of m to null 
+  y <- NULL # Used to set the value of y to null
   setmatrix <- function(y) { # Used to set the value of the matrix
     x <<- y
     m <<- NULL 
   }
 
-  list(setmatrix = setmatrix, getmatrix = getmatrix, # Creates a list tostore functions
+  list(setmatrix = setmatrix, getmatrix = getmatrix, # Creates a list to store functions
        setinverse = setinverse,
        getinverse = getinverse)
 }

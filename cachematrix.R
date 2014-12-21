@@ -12,14 +12,14 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 cacheSolve <- function (x=matrix(), ...) {
   # Compares the martrices
-  m <- x$getinverse() 
+  m <- x$getinverse() # Checks if an inverse has already been calculated and gets it.
   if(!is.null(m)){ 
     if(x$setmatrix() == x$getmatrix()) { # Checks if the matrix has changed, and if it hasn't then sends a text message and returns the cached matrix.
       
       return(m)
     }
     
-    y <- x$getmatrix() 
+    y <- x$getmatrix() # Gets value of inout matrix
     x$setmatrix(y) 
     m <- solve(y, ...) 
     x$setinverse(m) # Runs the set inverse function on the inverse to cache the inverse
